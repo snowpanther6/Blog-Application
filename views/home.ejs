@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+<a href="/compose"><button class="btn btn-secondary btn-post" type="button" name="button">Write your Post</button></a>
+
+
+
+<% for(var i = posts.length-1 ; i>=0 ; i--){ %>
+   <div class="card bg-light mb-3" style="max-width: 100%;">
+     <div class="card-header header"><h1><%= posts[i].title %></h1></div>
+     <div class="card-body">
+
+       <p class="card-text text">
+         <%= posts[i].content.substring(0,500)+"..." %><a class="readmore" href="/posts/<%=posts[i]._id%>">Read more</a>
+       </p>
+    <%   var photo = "images/man.png";  %>
+  <%    if(posts[i].photo){%>
+  <%      photo = posts[i].photo;%>
+  <%    }%>
+        <footer class="blockquote-footer">
+          <img src="<%= photo%>" class="rounded-circle z-depth-0"
+            alt="avatar image" height="30">
+          <cite title="Source Title"><%= posts[i].name %></cite>
+        </footer>
+     </div>
+   </div>
+<% } %>
+
+
+
+
+
+
+
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,30 @@
+.container-fluid {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+
+.btn-post{
+  margin: 15px 0;
+}
+.header{
+  font-family: 'Acme', sans-serif;
+}
+.text{
+  font-family: 'Varela Round', sans-serif;
+}
+.readmore{
+  text-decoration: none;
+}
